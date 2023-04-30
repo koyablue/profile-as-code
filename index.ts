@@ -2,14 +2,30 @@ class Profile {
   private frontendExperience: boolean;
   private backendExperience: boolean;
   private infrastructureExperience: boolean;
-  private skills: string[];
+  private frontendSkills: string[];
+  private backendSkills: string[];
+  private infraSkills: string[];
+  private otherTechSkills: string[];
+  private waysToContribute: string[];
   private contactInfo: string;
 
   constructor() {
     this.frontendExperience = true;
     this.backendExperience = true;
     this.infrastructureExperience = true;
-    this.skills = [
+    this.frontendSkills = [
+      'TypeScript',
+      'JavaScript',
+      'React',
+      'Next.js',
+      'CSS-in-JS',
+      'Jest',
+      'Storybook',
+      'Tailwind CSS',
+      'HTML',
+      'CSS',
+    ];
+    this.waysToContribute = [
       'fullstack development',
       'problem-solving',
       'communicate well within the team',
@@ -24,8 +40,8 @@ class Profile {
       && this.infrastructureExperience;
   }
 
-  whatICanContribute(): string[] {
-    return this.skills
+  howICanContribute(): string[] {
+    return this.waysToContribute
   }
 
   contact(): string {
@@ -33,7 +49,9 @@ class Profile {
   }
 }
 
+// TODO: want to output sentences
+
 const KoyaAoyama = new Profile()
 console.log(KoyaAoyama.isFullStackEngineer())
-console.log(`Please check out ${KoyaAoyama.whatICanContribute().join(', ')}.`)
+console.log(`Please check out ${KoyaAoyama.howICanContribute().join(', ')}.`)
 console.log(`Feel free to contact me from here: ${KoyaAoyama.contact()}.`)
