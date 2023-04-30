@@ -1,0 +1,1 @@
+export const linkedInContactUrl = 'https://www.linkedin.com/in/koya-aoyama/overlay/contact-info/';

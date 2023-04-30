@@ -6,7 +6,7 @@ class Profile {
   private backendSkills: string[];
   private infraSkills: string[];
   private otherTechSkills: string[];
-  private waysToContribute: string[];
+  private strength: string[];
   private contactInfo: string;
 
   constructor() {
@@ -25,7 +25,7 @@ class Profile {
       'HTML',
       'CSS',
     ];
-    this.waysToContribute = [
+    this.strength = [
       'fullstack development',
       'problem-solving',
       'communicate well within the team',
@@ -41,7 +41,7 @@ class Profile {
   }
 
   howICanContribute(): string[] {
-    return this.waysToContribute
+    return this.strength
   }
 
   contact(): string {
